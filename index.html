@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Web Workers simple example</title>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <script src="blocking.js"></script>
+    <script src="request-animation.js"></script>
+    <script src="web-worker-invoker.js"></script>
+    <style>
+
+        #resultBox {
+            float:left;
+            margin-top:20px;
+            margin-left:10px;
+        }
+        #resultValue {
+            font-weight: bold;
+        }
+        #superman {
+            position:absolute;
+            z-index:500;
+            left:50px;
+            top:150px;
+        }
+    </style>
+</head>
+<body>
+<button style="float:left" onclick="doSomethingIntensive()">Block the main thread</button>
+<button style="float:left" onclick="blockButRequestAnimationFrame()">Request Animation Frame</button>
+<button style="float:left" onclick="doWorkInWebWorker()">Web worker</button>
+<br>
+<p id="resultBox">
+    Result:
+    <span id="resultValue"></span>
+</p>
+<div id="superman">SUPERMAN</div>
+</body>
+</html>
