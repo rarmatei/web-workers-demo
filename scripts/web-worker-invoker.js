@@ -2,7 +2,7 @@
  * Created by volker on 10/07/2016.
  */
 
-var worker = new Worker("web-worker.js");
+var worker = new Worker("scripts/web-worker.js");
 
 function doWorkInWebWorker() {
 
